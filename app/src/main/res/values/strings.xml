@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TP1App</string>
+    <string name="bonjour">Bonjour et bienvenue sur mon application Android</string>
+</resources>
