@@ -21,7 +21,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-         edit=findViewById(R.id.editTxtValeur);
+        //if (savedInstanceState != null){
+         //   String valeur = savedInstanceState.getString("clé");
+        //}
+
+
+        edit=findViewById(R.id.editTxtValeur);
         Button btnQuitter = (Button) findViewById(R.id.btnQuitter);
         Button btnEnvoyer = (Button) findViewById(R.id.btnEnvoyer);
         Button btnAct2 = (Button) findViewById(R.id.btnAct2);
@@ -153,4 +158,25 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 
+
+    //Exercice 3
+
+
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString("clé", edit.getText().toString());
+
+    }
+
+
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        String valeur = savedInstanceState.getString("clé");
+
+    }
+
+
+
+
 }
+

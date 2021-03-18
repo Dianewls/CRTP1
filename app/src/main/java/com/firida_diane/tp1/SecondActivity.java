@@ -19,16 +19,19 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        TextView textView= findViewById(R.id.textView1);
+        TextView textView= findViewById(R.id.textView);
 
+        //Exercice 1
         SharedPreferences settings = getSharedPreferences("cycle_vie_prefs", Context.MODE_PRIVATE);
+
         textView.setText(settings.getString("valeur",""));
 
+        //Exercice 2: recuperation avec un intent
        //Intent intent =getIntent();
        //String s=intent.getStringExtra("cle");
        //textView.setText(s);
 
-
+        //Eercice3 dans le MainActivity
 
         popUp("onCreate()");
     }
